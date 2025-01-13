@@ -202,7 +202,9 @@ class ProcessingBase(ast.NodeVisitor):
             do_assign(decoded, target)
 
     def decode_node(self, node):
-        if isinstance(node, ast.Name):
+        if isinstance(node, ast.Constant):
+             return [node.value]
+        elif isinstance(node, ast.Name):
             return [self.scope_manager.get_def(self.current_ns, node.id)]
         elif isinstance(node, ast.Call):
             decoded = self.decode_node(node.func)
