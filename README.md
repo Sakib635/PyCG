@@ -1,3 +1,21 @@
+### Install Python 3.9
+
+### Verify Installation:
+### py -3.9 --version
+
+### Create Venv:
+### py -3.9 -m venv venv39
+### .\venv39\Scripts\activate
+ 
+### Install modified pycg:
+### pip install git+https://github.com/Sakib635/PyCG.git
+ 
+### Run:
+### python -m pycg --package package package\test.py -o call_graph.json
+
+
+
+
 # PyCG - Practical Python Call Graphs
 
 [![Linters](https://github.com/vitsalis/PyCG/actions/workflows/linters.yml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/linters.yml)

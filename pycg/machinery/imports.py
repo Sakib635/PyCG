@@ -87,6 +87,7 @@ class ImportManager(object):
 
         node = self.get_node(self._get_module_path())
         if not node:
+            print(f"DEBUG: Could not find node {self._get_module_path()}")
             raise ImportManagerError("Can't add edge to a non existing node")
 
         node["imports"].add(dest)
